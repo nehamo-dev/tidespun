@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tidespun: publishing for AI-native creators</title>
+<meta name="description" content="Tidespun is the end-to-end publishing platform for AI-native creators. Agents orchestrate the best AI tools so you can focus on your ideas.">
+<link rel="icon" type="image/svg+xml" href="assets/tidespun-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,500;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--chalk:#F5F5F0;--navy:#1A1F3A;--pink:#4A1D3F;--lavender:#DAD3DE;--lavender-soft:#ECE9EE;--champagne:#D8BF98;color-scheme:light}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--navy)}
+a{color:#1A1F3A}a:hover{color:#4A1D3F}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #4A1D3F;outline-offset:3px}
+#email::placeholder{color:#55586C;opacity:1}
+h1,h2,h3{text-wrap:balance}
+section{scroll-margin-top:24px}
+.ml-menu{display:none;position:relative}
+.ml-menu summary{list-style:none;width:44px;height:44px;border-radius:50%;border:1px solid #E2E1DA;background:#FFFFFF;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.ml-menu summary::-webkit-details-marker{display:none}
+.ml-menu-panel{position:absolute;right:0;top:52px;z-index:10;background:#FFFFFF;border:1px solid #E2E1DA;border-radius:16px;padding:8px;display:flex;flex-direction:column;min-width:200px}
+.ml-menu-panel a{text-decoration:none;padding:12px 14px;border-radius:10px;font-size:15px}
+.ml-menu-panel a:hover{background:#ECE9EE;color:#1A1F3A}
+.ml-menu-panel .ml-menu-cta{background:#4A1D3F;color:#FFFFFF;margin-top:6px;text-align:center}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (max-width: 760px){
+  .ml-nav,.ml-cta{display:none !important}
+  .ml-menu{display:block}
+  header > div{padding:14px 20px !important}
+  header img{height:28px !important}
+  section[id="top"]{padding:48px 20px 56px !important}
+  section[id="top"] > div{gap:40px !important}
+  section[id="top"] p{font-size:17px !important}
+  [style*="height: 540px"]{height:440px !important}
+  [style*="width: 360px; height: 360px"]{width:240px !important;height:240px !important;right:-40px !important;top:-30px !important}
+  [style*="left: 32px; right: 32px; bottom: 32px"]{left:16px !important;right:16px !important;bottom:16px !important}
+  [style*="left: 32px; top: 36px"]{left:16px !important;top:18px !important}
+  [style*="padding: 128px 24px 112px"]{padding:72px 20px 64px !important}
+  [style*="padding: 120px 24px"]{padding:72px 20px !important}
+  [style*="padding: 48px 56px"]{padding:32px 24px !important}
+  [style*="padding: 112px 48px"]{padding:64px 24px !important}
+  section[id="waitlist"]{padding:0 12px 12px !important}
+  [style*="width: 420px; height: 420px"]{width:280px !important;height:280px !important;right:-90px !important;top:-80px !important}
+  [style*="margin-bottom: 72px"],[style*="margin-bottom: 56px"]{margin-bottom:40px !important}
+  [style*="width: 240px; height: 240px; flex-shrink: 0"]{width:150px !important;height:150px !important}
+  [style*="width: 149px; height: 149px"]{width:93px !important;height:93px !important;right:12px !important;top:11px !important}
+  footer > div{padding:48px 20px 40px !important}
+}
+</style>
+</head>
+<body>
+<div style="font-family: 'DM Sans', system-ui, sans-serif; color: #1A1F3A; background: #F5F5F0; min-height: 100vh; overflow: hidden">
+
+<header style="border-bottom: 1px solid #E2E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<img src="assets/tidespun-logo.svg" alt="Tidespun" style="height: 34px; width: auto; display: block">
+</a>
+<nav class="ml-nav" style="display: flex; gap: 32px; flex-wrap: wrap; font-size: 15px">
+<a href="#how" style="text-decoration: none">How it works</a>
+<a href="#formats" style="text-decoration: none">Formats</a>
+<a href="#creators" style="text-decoration: none">Creators</a>
+<a href="#pricing" style="text-decoration: none">Pricing</a>
+</nav>
+<div class="ml-cta" style="display: flex; gap: 8px; align-items: center">
+<a href="#signin" style="text-decoration: none; font-size: 15px; padding: 12px 14px">Sign in</a>
+<a href="#waitlist" style="text-decoration: none; font-size: 15px; font-weight: 500; padding: 12px 22px; background: #4A1D3F; color: #FFFFFF; border-radius: 999px">Join the waitlist</a>
+</div>
+<details class="ml-menu">
+<summary aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1F3A" stroke-width="1.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"></path></svg></summary>
+<div class="ml-menu-panel">
+<a href="#how">How it works</a><a href="#formats">Formats</a><a href="#creators">Creators</a><a href="#pricing">Pricing</a><a href="#signin">Sign in</a><a class="ml-menu-cta" href="#waitlist">Join the waitlist</a>
+</div>
+</details>
+</div>
+</header>
+
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 88px">
+<div style="display: flex; gap: 64px; align-items: center; flex-wrap: wrap">
+<div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #55586C">
+<span style="width: 28px; height: 1px; background: #55586C"></span>
+<span>CREATE · PRODUCE · PUBLISH</span>
+</div>
+<h1 style="margin: 0; font-weight: 700; font-size: clamp(36px, 4.2vw, 54px); line-height: 1.06; letter-spacing: -0.035em">The end-to-end publishing platform for <em style="font-style: italic; color: #4A1D3F">AI-native creators.</em></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #55586C; max-width: 520px">Tidespun's agents orchestrate the best AI tools across creation and publishing, so you can focus on your ideas and creative voice while AI handles the production complexity.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #1A1F3A; font-weight: 500">Built for podcasts, spoken word, books and beyond.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center">
+<a href="#waitlist" style="text-decoration: none; font-weight: 500; font-size: 16px; padding: 16px 28px; background: #4A1D3F; color: #FFFFFF; border-radius: 999px">Join the waitlist</a>
+<a href="#how" style="text-decoration: none; font-weight: 500; font-size: 16px; padding: 15px 27px; border: 1px solid #1A1F3A; border-radius: 999px">See how it works</a>
+</div>
+</div>
+
+<div style="flex: 1 1 480px; position: relative; height: 540px; border-radius: 28px; background: #DAD3DE; overflow: hidden">
+<img src="assets/moon-mark.png" alt="" style="position: absolute; width: 360px; height: 360px; object-fit: contain; right: -60px; top: -40px; opacity: 0.95">
+<div style="position: absolute; left: 32px; top: 36px; display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: rgba(255,255,255,0.7); border-radius: 999px; font-size: 13px; font-weight: 500">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #4A1D3F"></span>
+<span>Agents at work</span>
+</div>
+<div style="position: absolute; left: 32px; right: 32px; bottom: 32px; display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px">
+<span style="font-weight: 500">Podcast episode</span>
+<span style="color: #55586C">Mixing voice + music</span>
+</div>
+<div style="display: flex; align-items: center; gap: 3px; height: 36px">
+<div style="width: 4px; border-radius: 2px; height: 10px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 18px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 26px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 14px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 30px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 22px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 34px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 16px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 24px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 36px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 20px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 28px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 12px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 32px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 26px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 18px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 34px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 22px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 14px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 30px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 24px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 36px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 18px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 26px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 12px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 28px; background: #4A1D3F"></div><div style="width: 4px; border-radius: 2px; height: 20px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 34px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 16px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 24px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 30px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 14px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 22px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 36px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 18px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 26px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 10px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 20px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 28px; background: #E2E1DA"></div><div style="width: 4px; border-radius: 2px; height: 16px; background: #E2E1DA"></div>
+</div>
+</div>
+<div style="display: flex; gap: 12px">
+<div style="flex: 1; background: #FFFFFF; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 13px; font-weight: 500">Audiobook · Chapter 3</div>
+<div style="height: 6px; border-radius: 3px; background: #E2E1DA; overflow: hidden"><div style="width: 64%; height: 6px; background: #4A1D3F"></div></div>
+<div style="font-size: 12px; color: #55586C">Narration in your voice</div>
+</div>
+<div style="flex: 1; background: #FFFFFF; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 13px; font-weight: 500">Promo shorts generated</div>
+<div style="display: flex; gap: 6px">
+<div style="width: 22px; height: 38px; border-radius: 4px; background: #4A1D3F; display: flex; align-items: center; justify-content: center"><svg width="8" height="8" viewBox="0 0 8 8"><path d="M1 0.5v7l6-3.5z" fill="#FFFFFF"></path></svg></div>
+<div style="width: 22px; height: 38px; border-radius: 4px; background: #DAD3DE; display: flex; align-items: center; justify-content: center"><svg width="8" height="8" viewBox="0 0 8 8"><path d="M1 0.5v7l6-3.5z" fill="#1A1F3A"></path></svg></div>
+<div style="width: 22px; height: 38px; border-radius: 4px; background: #D8BF98; display: flex; align-items: center; justify-content: center"><svg width="8" height="8" viewBox="0 0 8 8"><path d="M1 0.5v7l6-3.5z" fill="#1A1F3A"></path></svg></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 128px 24px 112px">
+<div style="display: flex; gap: 64px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 72px">
+<h2 style="flex: 2 1 520px; margin: 0; font-weight: 700; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.03em">Creators shouldn't have to be <em style="color: #4A1D3F">systems integrators.</em></h2>
+<p style="flex: 1 1 320px; margin: 0; font-size: 18px; line-height: 1.6; color: #55586C">Making one piece of AI-assisted media today means juggling a stack of separate tools. Tidespun brings them under one roof.</p>
+</div>
+<div style="display: flex; gap: 40px; flex-wrap: wrap">
+<div style="flex: 1 1 280px; border-top: 1px solid #1A1F3A; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: #4A1D3F">01</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 500">You bring the idea</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6">Your concept, your voice and your creative direction stay at the center of everything.</p>
+</div>
+<div style="flex: 1 1 280px; border-top: 1px solid #1A1F3A; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: #4A1D3F">02</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 500">Agents run production</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6">Tidespun's agents pick and orchestrate the best underlying AI tools for every step.</p>
+</div>
+<div style="flex: 1 1 280px; border-top: 1px solid #1A1F3A; padding-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: #4A1D3F">03</div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 500">Publish anywhere</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6">Ship finished work across formats and channels, all from one place.</p>
+</div>
+</div>
+</section>
+
+<section id="how" style="border-top: 1px solid #E2E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 120px 24px 72px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 56px">
+<h2 style="margin: 0; max-width: 720px; font-weight: 700; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.03em">Everything between your idea <em style="color: #4A1D3F">and your audience.</em></h2>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #55586C">HOW IT WORKS</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 1px solid #E2E1DA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 48px; height: 48px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A1D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="12" cy="18" r="2"></circle><path d="M7 6h10M6 8l5 8M18 8l-5 8"></path></svg>
+</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 500">Agent orchestration</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6; font-size: 15px">Tidespun's agents choose the best underlying AI tool for each step and handle the handoffs between them.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E1DA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 48px; height: 48px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A1D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M9 9v11"></path></svg>
+</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 500">One creative workspace</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6; font-size: 15px">Ideas, drafts, assets and versions live in one place instead of scattered across apps.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E1DA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 48px; height: 48px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A1D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg>
+</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 500">One idea, many formats</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6; font-size: 15px">Shape a single idea into a podcast, a spoken-word piece, a book, or all three.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E1DA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 48px; height: 48px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A1D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"></path></svg>
+</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 500">Creative control</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6; font-size: 15px">Review and refine at every step. AI handles the production; your voice and choices stay yours.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E1DA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 48px; height: 48px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A1D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h1M6 9v6M9 6v12M12 9v6M15 4v16M18 8v8M21 12h0"></path></svg>
+</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 500">Production quality</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6; font-size: 15px">Polished audio and text output, assembled from best-in-class tools rather than one-size-fits-all.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E1DA; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 48px; height: 48px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A1D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 500">Publishing &amp; distribution</h3>
+<p style="margin: 0; color: #55586C; line-height: 1.6; font-size: 15px">Package and publish finished work to the formats and channels your audience already uses.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="formats" style="border-top: 1px solid #E2E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 56px">
+<h2 style="margin: 0; max-width: 720px; font-weight: 700; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.03em">One studio for <em style="color: #4A1D3F">every format.</em></h2>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #55586C">FORMATS</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+<div style="border-radius: 20px; overflow: hidden; background: #FFFFFF; color: #1A1F3A; border: 1px solid #E2E1DA; display: flex; flex-direction: column">
+<div style="height: 160px; background: #DAD3DE; display: flex; align-items: center; justify-content: center">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A1F3A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em">Podcasts</h3>
+<p style="margin: 0; color: #55586C; font-size: 15px; line-height: 1.55; flex-grow: 1">Go from episode idea to a produced, publish-ready show without juggling a stack of tools.</p>
+<a href="#formats" style="color: #1A1F3A; font-size: 15px; font-weight: 500; text-decoration: none; padding: 8px 0">Learn more →</a>
+</div>
+</div>
+<div style="border-radius: 20px; overflow: hidden; background: #FFFFFF; color: #1A1F3A; border: 1px solid #E2E1DA; display: flex; flex-direction: column">
+<div style="height: 160px; background: #EFE4D1; display: flex; align-items: center; justify-content: center">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A1F3A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h1M6 9v6M9 6v12M12 9v6M15 4v16M18 8v8M21 12h0"></path></svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em">Spoken word</h3>
+<p style="margin: 0; color: #55586C; font-size: 15px; line-height: 1.55; flex-grow: 1">Turn stories, poems and performances into polished audio.</p>
+<a href="#formats" style="color: #1A1F3A; font-size: 15px; font-weight: 500; text-decoration: none; padding: 8px 0">Learn more →</a>
+</div>
+</div>
+<div style="border-radius: 20px; overflow: hidden; background: #FFFFFF; color: #1A1F3A; border: 1px solid #E2E1DA; display: flex; flex-direction: column">
+<div style="height: 160px; background: #ECE9EE; display: flex; align-items: center; justify-content: center">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A1F3A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2z"></path><path d="M12 6v14"></path></svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em">Books</h3>
+<p style="margin: 0; color: #55586C; font-size: 15px; line-height: 1.55; flex-grow: 1">Write, produce and publish books, then extend them into audio editions.</p>
+<a href="#formats" style="color: #1A1F3A; font-size: 15px; font-weight: 500; text-decoration: none; padding: 8px 0">Learn more →</a>
+</div>
+</div>
+<div style="border-radius: 20px; overflow: hidden; background: #4A1D3F; color: #FFFFFF; display: flex; flex-direction: column">
+<div style="height: 160px; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em">And beyond</h3>
+<p style="margin: 0; color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.55; flex-grow: 1">Promo shorts, video and whatever format comes next, all from the same idea.</p>
+<a href="#formats" style="color: #FFFFFF; font-size: 15px; font-weight: 500; text-decoration: none; padding: 8px 0">Learn more →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="creators" style="border-top: 1px solid #E2E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 56px">
+<h2 style="margin: 0; font-weight: 700; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.03em">Made with <em style="color: #4A1D3F">Tidespun.</em></h2>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #55586C">CREATORS</span>
+</div>
+<div style="display: flex; gap: 20px; flex-wrap: wrap">
+<div style="flex: 2 1 560px; border-radius: 20px; background: #ECE9EE; padding: 28px; box-sizing: border-box; display: flex; gap: 32px; align-items: center; flex-wrap: wrap">
+<div style="width: 240px; height: 240px; flex-shrink: 0; border-radius: 16px; background: #1A1F3A; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; box-sizing: border-box">
+<img src="assets/moon-mark.png" alt="" style="position: absolute; width: 149px; height: 149px; object-fit: contain; right: 19px; top: 17px">
+<div style="position: relative; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: #DAD3DE">PODCAST</div>
+<div style="position: relative; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; color: #F5F5F0">Moonlit Indian Tales</div>
+</div>
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #55586C">FEATURED SERIES</div>
+<h3 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Moonlit Indian Tales</h3>
+<p style="margin: 0; font-size: 15px; color: #55586C; line-height: 1.5">Timeless Indian bedtime stories, from the Panchatantra to Akbar &amp; Birbal, retold in calm, simple language for families. By Moonlit Tales Studio.</p>
+<div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid #D4D2DA; border-bottom: 1px solid #D4D2DA">
+<span style="font-size: 30px; font-weight: 700; letter-spacing: -0.03em; color: #4A1D3F">5 days → 30 min</span>
+<span style="font-size: 14px; color: #55586C">production time per episode with Tidespun</span>
+</div>
+<div style="background: #FFFFFF; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px">
+<button type="button" aria-label="Play episode" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; border: 0; background: #4A1D3F; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="14" height="14" viewBox="0 0 8 8"><path d="M1.5 0.8v6.4l5.5-3.2z" fill="#FFFFFF"></path></svg></button>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Tonight: a Panchatantra tale</div>
+<div style="display: flex; align-items: center; gap: 3px; height: 30px; overflow: hidden"><div style="width: 3px; height: 8px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 14px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 20px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 12px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 24px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 18px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 28px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 14px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 22px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 30px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 16px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 24px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 12px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 26px; border-radius: 2px; background: #4A1D3F"></div><div style="width: 3px; height: 18px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 10px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 22px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 16px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 26px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 12px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 20px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 14px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 24px; border-radius: 2px; background: #D4D2DA"></div><div style="width: 3px; height: 10px; border-radius: 2px; background: #D4D2DA"></div></div>
+</div>
+</div>
+<a href="https://open.spotify.com/show/033lvWJqSkBtRsDtrLsrxo" style="font-size: 15px; font-weight: 500; text-decoration: none; padding: 6px 0">Listen on Spotify →</a>
+</div>
+</div>
+<div style="flex: 1 1 300px; border-radius: 20px; border: 1px solid #E2E1DA; background: #FFFFFF; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #4A1D3F">FROM OUR FOUNDER</span><p style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.45; letter-spacing: -0.01em">"I've lived this problem first-hand. For every episode of Moonlit Indian Tales, I used to hand-switch between ElevenLabs, Suno, Gemini and more, so I built Tidespun for my own show first. Now I spend my evenings on the stories, not the stitching, and every episode still sounds like me."</p></div>
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="width: 44px; height: 44px; border-radius: 50%; background: #ECE9EE; display: flex; align-items: center; justify-content: center"><img src="assets/tidespun-mark.svg" alt="" style="width: 26px; height: 26px"></div>
+<div><div style="font-weight: 500">Founder, Tidespun</div><div style="font-size: 14px; color: #55586C">Creator, Moonlit Indian Tales</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="pricing" style="border-top: 1px solid #E2E1DA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 56px">
+<h2 style="margin: 0; max-width: 720px; font-weight: 700; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.03em">Pricing built around <em style="color: #4A1D3F">how you create.</em></h2>
+<span style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #55586C">PRICING</span>
+</div>
+<div style="border-radius: 28px; background: #ECE9EE; padding: 48px 56px; display: flex; gap: 40px; align-items: center; justify-content: space-between; flex-wrap: wrap">
+<p style="margin: 0; flex: 1 1 420px; font-size: 17px; line-height: 1.6; color: #55586C; max-width: 560px">Plans for individual creators, studios and media teams. Get in touch and we'll put together the right fit for you.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a href="#contact" style="text-decoration: none; font-weight: 500; font-size: 16px; padding: 16px 28px; background: #4A1D3F; color: #FFFFFF; border-radius: 999px">Contact us for pricing</a>
+<a href="#waitlist" style="text-decoration: none; font-weight: 500; font-size: 16px; padding: 15px 27px; border: 1px solid #1A1F3A; border-radius: 999px">Join the waitlist</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="waitlist" style="padding: 0 24px 24px">
+<div style="max-width: 1152px; margin: 0 auto; position: relative; overflow: hidden; background: #4A1D3F; color: #F5F5F0; border-radius: 32px; padding: 112px 48px">
+<img src="assets/moon-mark-reversed.svg" alt="" style="position: absolute; width: 420px; height: 420px; object-fit: contain; right: -110px; top: -90px; opacity: 0.18">
+<div style="position: relative; max-width: 640px; display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-weight: 700; font-size: clamp(34px, 4.2vw, 54px); line-height: 1.06; letter-spacing: -0.03em">Let your creativity lead. <em>Let Tidespun handle the rest.</em></h2>
+<p style="margin: 0; font-size: 18px; opacity: 0.85">Join the waitlist for early access.</p>
+<form id="waitlist-form" style="display: flex; gap: 10px; flex-wrap: wrap; max-width: 540px">
+<label for="email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Email address</label>
+<input id="email" type="email" placeholder="you@studio.com" style="flex: 1 1 260px; height: 52px; padding: 0 20px; border-radius: 999px; border: 0; background: #FFFFFF; color: #1A1F3A; font-size: 16px; font-family: inherit">
+<button type="submit" style="height: 52px; padding: 0 26px; border-radius: 999px; border: 0; background: #1A1F3A; color: #FFFFFF; font-weight: 500; font-size: 16px; font-family: inherit">Join the waitlist</button>
+</form>
+<p id="waitlist-note" role="status" style="margin: 0; font-size: 15px; min-height: 22px"></p>
+</div>
+</div>
+</section>
+
+<footer>
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 56px; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 260px">
+<div style="display: flex; align-items: center; gap: 12px">
+<img src="assets/tidespun-logo.svg" alt="Tidespun" style="height: 30px; width: auto; display: block">
+</div>
+<p style="margin: 0; color: #55586C; font-size: 15px">Where human creativity leads.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<div style="font-weight: 500">Product</div>
+<a href="#how" style="text-decoration: none; color: #55586C">How it works</a>
+<a href="#formats" style="text-decoration: none; color: #55586C">Formats</a>
+<a href="#creators" style="text-decoration: none; color: #55586C">Creators</a>
+<a href="#pricing" style="text-decoration: none; color: #55586C">Pricing</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<div style="font-weight: 500">Company</div>
+<a href="#about" style="text-decoration: none; color: #55586C">About</a>
+<a href="#careers" style="text-decoration: none; color: #55586C">Careers</a>
+<a href="#contact" style="text-decoration: none; color: #55586C">Contact</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<div style="font-weight: 500">Legal</div>
+<a href="#privacy" style="text-decoration: none; color: #55586C">Privacy</a>
+<a href="#terms" style="text-decoration: none; color: #55586C">Terms</a>
+</div>
+</div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var f=document.getElementById('waitlist-form'),n=document.getElementById('waitlist-note');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=(document.getElementById('email').value||'').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){n.textContent='Enter a valid email address, like you@studio.com.';return;}
+    n.textContent='Thanks! Sign-ups are not connected yet, so this address was not saved.';
+  });
+  document.querySelectorAll('.ml-menu-panel a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open');});});
+})();
+</script>
+</body>
+</html>
