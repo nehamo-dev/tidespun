@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers config: serves the static site in ./public
+  // "name" must match the Worker name in your Cloudflare dashboard.
+  "name": "tidespun",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}
